@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Шевелёв Артём</title>
+  <meta charset="utf-8">
+</head>
+
+<body>
+  <h4>472665</h4>
+  <input type="number" value="4" id="n1">
+  <input type="number" value="4" id="n2">
+  <input type="number" value="4" id="n3">
+  <input type="number" value="4" id="n4">
+  <input type="number" value="4" id="n5">
+  <input type="number" value="4" id="n6">
+  <input type="text" value="" id="result1">
+  <input type="text" value="" id="result2">
+  <button id="bt">Выполнить задание</button>
+</body>
+
+<script>
+  // inputs
+  const inp1 = document.querySelector( '#n1' )
+  const inp2 = document.querySelector( '#n2' )
+  const inp3 = document.querySelector( '#n3' )
+  const inp4 = document.querySelector( '#n4' )
+  const inp5 = document.querySelector( '#n5' )
+  const inp6 = document.querySelector( '#n6' )
+  const result1 = document.querySelector( '#result1' )
+  const result2 = document.querySelector( '#result2' )
+  //btn
+  const btn = document.querySelector( '#bt' )
+
+  btn.addEventListener( 'click', () => {
+    const [ n1, n2, n3, n4, n5, n6 ] = [
+      Number( inp1.value ),
+      Number( inp2.value ),
+      Number( inp3.value ),
+      Number( inp4.value ),
+      Number( inp5.value ),
+      Number( inp6.value ),
+    ]
+    
+    const D = n1 * n5 - n2 * n4;
+    const Dx = n3 * n5 - n2 * n6;
+    const Dy = n1 * n6 - n3 * n4;
+    const x = Dx / D;
+    const y = Dy / D;
+
+    result1.value = x.toString()
+    result2.value = y.toString()
+  } )
+</script>
+
+</html>
